@@ -1,1 +1,1 @@
-criando mais páginas para o projeto.
+Fase de criação de páginas HTML
