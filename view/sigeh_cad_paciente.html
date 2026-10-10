@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cad_paciente</title>
+     <link rel="stylesheet" href="../css/style.css">
+    <!-- CDN do Font Awesome (necessário para os ícones funcionarem) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+    <body>
+        <header>   
+            <div>
+                 <h2><i class="fa-solid fa-hospital"></i> SIGEH - Sistema de Gestão Hospitalar</h2>
+                <a href="sigeh_login.html"><button>Sair</button></a>
+            </div>
+        </header>
+        <main>
+            <Fieldset>
+                <legend><h1> Cadastro de novo paciente</h1></legend>
+            <!-- (Mudar para POST) -->
+            
+                <form action="sigeh_home.html" method="get">
+               
+                    <fieldset>
+                        <legend>Dados Gerais</legend>
+                            <ul>
+                                <li>
+                                    <label for="nome">Nome do paciente:</label>
+                                    <input type="text" id="nome" name="nome" required> 
+                                </li>    
+                                <li>
+                                    <label for="sexo">Gênero:</label>
+                                    <select  id="sexo" name="sexo">
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="O">Outro</option>
+                                    </select>    
+                                </li>
+                                <li>
+                                    <label for="data_nascimento">Data de Nascimento:</label>
+                                    <input type="date" id="data_nascimento" name="data_nascimento">
+                                </li>
+                                <li>
+                                    <label for="num_sus">Cadastro SUS:</label>
+                                    <input type="text" id="num_sus" name="num_sus">
+                                </li>
+                                <li>
+                                    <label for="num_cpf">CPF:</label>
+                                    <input type="text" id="num_cpf" name="num_cpf">
+                                </li>
+                                <li>
+                                    <label for="num_telefone">Contato:</label>
+                                    <input type="text" id="num_telefone" name="num_telefone">
+                                </li>
+                                <li>
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" name="email">
+                                </li>
+                            </ul>
+                    </fieldset>
+                        
+                        <br>
+                        
+                    <fieldset>
+                        <legend>Dados de Endereço</legend>
+                            <ul>
+                                <li>
+                                    <label for="cep">CEP:</label>
+                                    <input type="text" id="cep" name="cep">
+                                </li>    
+                                <li>
+                                    <label for="endereco">Logradouro:</label>
+                                    <input type="text" id="endereco" name="endereco">
+                                </li>
+                                <li>
+                                    <label for="num_endereco">Nº:</label>
+                                    <input type="text" id="num_endereco" name="num_endereco"> 
+                                </li>
+                                <li>
+                                    <label for="bairro">Bairro:</label>
+                                    <input type="text" id="bairro" name="bairro">
+                                </li> 
+                                <li>
+                                    <label for="complemento">Complemento:</label>
+                                    <input type="text" id="complemento" name="complemento">
+                                </li>
+                                <li>
+                                    <label for="cidade">Cidade:</label>
+                                    <input type="text" id="cidade" name="cidade">
+                                </li> 
+                                <li>
+                                    <label for="uf">Estado:</label>
+                                    <input type="text" id="uf" name="uf">
+                                </li> 
+                                <li>
+                                    <label for="nacionalidade">Nacionalidade:</label>
+                                    <input type="text" id="nacionalidade" name="nacionalidade">
+                                </li>
+                            </ul>
+                    </fieldset>
+                        
+                    <br>       
+                    <button type="submit">salvar</button>
+                    <button type="reset">Reiniciar</button>   
+                </form>    
+            </fieldset>    
+        </main>
+    </body>
+</html>
