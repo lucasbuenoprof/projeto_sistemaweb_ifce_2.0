@@ -1,22 +1,22 @@
 /* ==========================================
-   1. RESET E CONFIGURAÇÕES GERAIS
+   1. RESET E ESTILOS GERAIS
    ========================================== */
 
-/* Seletor Universal (*): Seleciona TODOS os elementos da página para padronizar o visual */
+/* Seleciona todos os elementos para zerar margens e padronizar tamanhos */
 * {
-    margin: 0;                   /* Zera as margens externas padrão dos elementos */
-    padding: 0;                  /* Zera os espaçamentos internos padrão */
-    box-sizing: border-box;      /* Inclui padding e border no cálculo da largura total do elemento */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a pilha de fontes do texto */
+    margin: 0;                   /* Remove margens externas padrão do navegador */
+    padding: 0;                  /* Remove espaçamentos internos padrão */
+    box-sizing: border-box;      /* Faz com que largura/altura incluam bordas e padding */
+    font-family: Arial, sans-serif; /* Define a fonte padrão de toda a aplicação */
 }
 
-/* Configuração do contêiner principal da aplicação */
+/* Configuração do fundo e do texto base */
 body {
-    background-color: #f4f7f6;   /* Cor de fundo da página (tom cinza-claro hospitalar) */
-    color: #333;                 /* Cor padrão dos textos (cinza-escuro para leitura suave) */
-    display: flex;               /* Ativa o layout Flexbox no elemento pai */
-    flex-direction: column;      /* Organiza os filhos (header, main, footer) em coluna vertical */
-    min-height: 100vh;           /* Altura mínima de 100% da altura da janela visível (Viewport Height) */
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;          /* 1. Ativa o Flexbox */
+    flex-direction: column; /* 2. Organiza header, main e footer em coluna */
+    min-height: 100vh;      /* 3. Força a tela a ter no mínimo 100% da altura da janela */
 }
 
 
@@ -24,122 +24,223 @@ body {
    2. CABEÇALHO (HEADER) E RODAPÉ (FOOTER)
    ========================================== */
 
-/* Estilização da barra superior */
+/* Barra azul superior */
 header {
-    background-color: #0056b3;   /* Azul hospitalar para o fundo */
-    color: #ffffff;              /* Texto e ícones na cor branca */
-    padding: 1rem;               /* Espaçamento interno (1rem = ~16px) */
-    text-align: center;          /* Centraliza o título e o ícone na horizontal */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cria uma sombra suave abaixo da barra */
+    background-color: #0056b3;   /* Cor azul principal do sistema */
+    color: white;                /* Texto e ícones em branco */
+    padding: 15px 20px;          /* Espaço interno superior/inferior e lateral */
 }
 
-/* Estilização da barra inferior */
+/* Organização do título e do botão Sair dentro do header */
+header div {
+    display: flex;               /* Coloca o título e o botão lado a lado */
+    justify-content: space-between; /* Empurra o título para a esquerda e o botão para a direita */
+    align-items: center;         /* Alinha verticalmente ambos ao centro */
+}
+
+/* Botão vermelho "Sair" do topo */
+header button {
+    background-color: #dc3545;   /* Cor de fundo vermelha */
+    color: white;                /* Texto do botão em branco */
+    border: none;                /* Remove a borda padrão */
+    padding: 8px 16px;           /* Tamanho do botão */
+    border-radius: 4px;          /* Cantos levemente arredondados */
+    cursor: pointer;             /* Cursor em forma de mãozinha ao passar o rato */
+    width: auto;                 /* Garante que o botão não ocupe 100% da largura */
+}
+
+/* Rodapé no final da página */
 footer {
-    background-color: #e9ecef;   /* Fundo cinza bem claro */
-    text-align: center;          /* Centraliza o texto institucional */
-    padding: 0.8rem;             /* Espaçamento interno compacto */
-    font-size: 0.85rem;          /* Tamanho da fonte levemente reduzido */
-    color: #6c757d;              /* Cor de texto cinza-médio */
-    margin-top: auto;            /* Empurra o rodapé para o final da tela aproveitando o Flexbox */
-}
-
-
-/* ==========================================
-   3. ÁREA PRINCIPAL (MAIN) E LOGO
-   ========================================== */
-
-/* Seção central da página onde fica o login */
-main {
-    flex: 1;                     /* Faz o <main> crescer e ocupar todo o espaço vertical livre */
-    display: flex;               /* Habilita Flexbox no main */
-    flex-direction: column;      /* Empilha imagem, título e formulário na vertical */
-    align-items: center;         /* Centraliza os elementos no eixo horizontal */
-    justify-content: center;     /* Centraliza os elementos no eixo vertical */
-    padding: 2rem 1rem;          /* Espaçamento interno superior/inferior e laterais */
-}
-
-/* Controle de tamanho da imagem do logo */
-main img {
-    width: 100px;                /* Define a largura fixa da imagem em 100 pixels */
-    margin-bottom: 1rem;         /* Cria um espaço abaixo da imagem */
-}
-
-/* Estilização do título secundário h3 */
-main h3 {
-    color: #0056b3;              /* Tom de azul igual ao do cabeçalho */
-    margin-bottom: 1.5rem;       /* Afasta o título do cartão do formulário */
-    font-size: 1.3rem;           /* Aumenta o tamanho do texto do título */
-}
-
-
-/* ==========================================
-   4. CAIXA DE LOGIN (O CARTÃO)
-   ========================================== */
-
-form.login {
-    background-color: white;   /* Cartão branco */
-    width: 320px;              /* Largura fixa ajustada */
-    margin: 0 auto;            /* Centraliza a caixa na tela */
-    padding: 25px;             /* Aumentamos o espaço interno */
-    border-radius: 8px;        /* Bordas arredondadas */
-}
-
-/* Remove a linha padrão do fieldset */
-fieldset {
-    border: none;
-}
-
-
-/* ==========================================
-   5. CAMPOS (USUÁRIO E SENHA)
-   ========================================== */
-
-/* Espaço abaixo de cada bloco de campo */
-.campo {
-    margin-bottom: 20px;       /* Aumentado para afastar as duas caixas de texto */
-    text-align: left;
-}
-
-/* Texto acima das caixas de texto */
-.campo label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-}
-
-/* As caixas de entrada onde se digita */
-.campo input {
-    width: 100%;               /* Força o campo a ocupar todo o espaço do cartão */
-    padding: 10px;             /* Altura mais confortável para digitar */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;    /* Evita que o padding faça a caixa passar do tamanho */
-}
-
-
-/* ==========================================
-   6. BOTÃO E LINK
-   ========================================== */
-
-button {
-    width: 100%;               /* Botão ocupando toda a largura */
-    padding: 12px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 15px;       /* Cria espaço entre o botão e o link abaixo */
-}
-
-/* Link de "Esqueceu sua senha?" */
-.link-auxiliar {
+    background-color: #e9ecef;
     text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+    margin-top: auto;       /* Troque 40px por auto */
 }
 
-.link-auxiliar a {
-    color: #0056b3;
-    text-decoration: none;
-    font-size: 13px;
+/* ==========================================
+   3. ESTRUTURA PRINCIPAL (MAIN)
+   ========================================== */
+
+/* Bloco principal que envolve o conteúdo das páginas */
+main {
+    width: 90%;                  /* Ocupa 90% da largura em ecrãs pequenos */
+    max-width: 800px;            /* Limita a largura máxima para não esticar demais */
+    margin: 30px auto;           /* Centraliza o bloco na horizontal da ecrã */
+    text-align: center;          /* Centraliza os títulos principais */
+}
+
+/* Logótipo na tela de login */
+main img {
+    width: 100px;                /* Define largura fixa de 100px */
+    margin-bottom: 10px;         /* Espaço abaixo da imagem */
+}
+
+/* Títulos principais (H1 e H3) */
+main h1, main h3 {
+    color: #0056b3;              /* Cor de texto azul */
+    margin-bottom: 20px;         /* Espaço abaixo do título */
+}
+
+
+/* ==========================================
+   4. CAIXAS E MOLDURAS (FIELDSET, UL, LI)
+   ========================================== */
+
+/* Caixas brancas que agrupam seções do formulário */
+fieldset {
+    background-color: white;     /* Fundo branco limpo */
+    border: 1px solid #ccc;      /* Borda cinzenta fina */
+    border-radius: 8px;          /* Cantos arredondados */
+    padding: 20px;               /* Espaço interno para o conteúdo */
+    margin-bottom: 20px;         /* Distância para o próximo elemento */
+    text-align: left;            /* Alinha os textos e campos para a esquerda */
+}
+
+/* Títulos das caixas (ex: Dados Gerais, Dados de Endereço) */
+legend {
+    font-weight: bold;           /* Texto em negrito */
+    color: #0056b3;              /* Cor azul */
+    padding: 0 8px;              /* Pequeno espaço lateral na legenda */
+}
+
+/* Remove marcadores de listas (bolinhas pretas das tags <ul> e <li>) */
+ul, li {
+    list-style: none;            /* Tira as bolinhas pretas da lista */
+    margin-bottom: 12px;         /* Dá espaço entre um campo e outro na lista */
+}
+
+
+/* ==========================================
+   5. CAMPOS DE ENTRADA (INPUT, SELECT, LABEL)
+   ========================================== */
+
+/* Rótulos dos campos (ex: Nome do Médico:, Especialidade:) */
+label {
+    display: block;              /* Coloca o texto numa linha própria acima do input */
+    margin-bottom: 6px;          /* Distância entre o rótulo e a caixa de digitação */
+    font-size: 14px;             /* Tamanho do texto */
+    font-weight: bold;           /* Deixa o rótulo em negrito */
+}
+
+/* Formatação de todas as caixas de texto, datas, e-mails e seleções */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+select {
+    width: 100%;                 /* Ocupa 100% da largura da caixa pai */
+    padding: 10px;               /* Altura interna confortável para digitação */
+    border: 1px solid #ccc;      /* Borda cinzenta simples */
+    border-radius: 4px;          /* Cantos ligeiramente arredondados */
+    font-size: 14px;             /* Tamanho da fonte digitada */
+}
+
+
+/* ==========================================
+   6. FORMULÁRIO DE LOGIN (CARTÃO ESPECÍFICO)
+   ========================================== */
+
+/* Regra exclusiva para o formulário de login */
+form.login {
+    background-color: white;     /* Fundo branco */
+    width: 100%;                 /* Largura até o limite do max-width */
+    max-width: 380px;            /* Largura fixa reduzida para o login */
+    margin: 0 auto;              /* Centraliza o cartão de login */
+    padding: 25px;               /* Espaço interno do cartão */
+    border-radius: 8px;          /* Cantos arredondados */
+    border: 1px solid #ccc;      /* Borda cinzenta fina */
+    text-align: left;            /* Alinha rótulos à esquerda */
+}
+
+
+/* ==========================================
+   7. BOTÕES DE FORMULÁRIO E LINKS
+   ========================================== */
+
+/* Botões gerais de formulários (Salvar, Reiniciar, Entrar, Buscar) */
+button {
+    background-color: #0056b3;   /* Cor azul principal */
+    color: white;                /* Texto em branco */
+    border: none;                /* Remove borda padrão */
+    padding: 10px 20px;          /* Altura e largura interna do botão */
+    border-radius: 4px;          /* Cantos arredondados */
+    font-size: 15px;             /* Tamanho do texto do botão */
+    cursor: pointer;             /* Mostra a mãozinha de clique */
+    margin-right: 8px;           /* Espaço lateral quando há dois botões lado a lado */
+    margin-top: 10px;            /* Espaço acima dos botões */
+}
+
+/* Ajuste específico para o botão de reset (Reiniciar) */
+button[type="reset"] {
+    background-color: #6c757d;   /* Cor cinzenta para indicar ação secundária */
+}
+
+/* Efeito ao passar o rato em qualquer botão */
+button:hover {
+    opacity: 0.9;                /* Suaviza levemente a cor ao passar o rato */
+}
+
+/* Links normais do sistema */
+a {
+    color: #0056b3;              /* Texto em azul */
+    text-decoration: none;       /* Sem sublinhado por padrão */
+}
+
+a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o rato */
+}
+
+.link-auxiliar {
+    text-align: center;          /* Centraliza o link */
+    margin-top: 15px;            /* Espaço acima do link */
+}
+
+/* ==========================================
+   8. TABELAS E BOTÕES DE AÇÃO (BUSCA)
+   ========================================== */
+
+/* Faz a tabela ocupar toda a largura da caixa branca */
+table {
+    width: 100%;                 /* Preenche 100% do espaço da caixa */
+    border-collapse: collapse;   /* Elimina espaço duplo entre bordas */
+    margin-top: 10px;            /* Espaço acima da tabela */
+}
+
+/* Formatação das células e do cabeçalho */
+th, td {
+    border: 1px solid #ccc;      /* Borda cinzenta fina */
+    padding: 10px;               /* Espaço interno para o texto não ficar colado */
+    text-align: left;            /* Alinha os textos à esquerda */
+    font-size: 14px;             /* Tamanho de letra legível */
+}
+
+/* Cabeçalho da tabela com fundo azul */
+th {
+    background-color: #0056b3;   /* Fundo azul */
+    color: white;                /* Texto em branco */
+}
+
+/* Linhas pares com fundo cinzento claro para fácil leitura */
+tr:nth-child(even) {
+    background-color: #f9f9f9;   /* Cor de fundo alternada */
+}
+
+/* Botões menores dentro da tabela */
+td button {
+    width: auto;                 /* Impede o botão de ocupar 100% da célula */
+    padding: 6px 12px;           /* Tamanho reduzido para caber na tabela */
+    font-size: 12px;             /* Texto menor */
+    margin: 2px;                 /* Separa o botão Editar do Excluir */
+}
+
+/* Botão específico para Excluir (Vermelho) */
+.btn-excluir {
+    background-color: #dc3545;   /* Cor de fundo vermelha */
+}
+
+/* Efeito ao passar o rato no botão Excluir */
+.btn-excluir:hover {
+    background-color: #a71d2a;   /* Vermelho mais escuro */
 }

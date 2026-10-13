@@ -16,88 +16,86 @@
             </div>
         </header>
         <main>
-            <Fieldset>
-                <legend><h1> Cadastro de novo paciente</h1></legend>
+            <h1>Cadastro de Pacientes</h1>
             <!-- (Mudar para POST) -->
-            
-                <form action="sigeh_home.html" method="get">
-               
-                    
-                        <dt><strong>Dados Gerais</strong></dt>
-                            <dd><label for="nome">Nome do paciente:</label>
-                                <input type="text" id="nome" name="nome" required> 
-                            </dd>    
-                            <dd>
-                                <label for="sexo">Gênero:</label>
-                                    <select  id="sexo" name="sexo">
-                                        <option value="M">Masculino</option>
-                                        <option value="F">Feminino</option>
-                                        <option value="O">Outro</option>
-                                    </select>    
-                            </dd>
-                                
-                                <label for="data_nascimento">Data de Nascimento:</label>
-                                <input type="date" id="data_nascimento" name="data_nascimento">
-                            </dd>
-                                <li>
-                                    <label for="num_sus">Cadastro SUS:</label>
-                                    <input type="text" id="num_sus" name="num_sus">
-                                </li>
-                                <li>
-                                    <label for="num_cpf">CPF:</label>
-                                    <input type="text" id="num_cpf" name="num_cpf">
-                                </li>
-                                <li>
-                                    <label for="num_telefone">Contato:</label>
-                                    <input type="text" id="num_telefone" name="num_telefone">
-                                </li>
-                                <li>
-                                    <label for="email">E-mail:</label>
-                                    <input type="email" id="email" name="email">
-                                </li>
-                            </ul>
-              
+            <form action="sigeh_home.html" method="get">
                 
-                        <legend>Dados de Endereço</legend>
-                            <ul>
-                                <li>
-                                    <label for="cep">CEP:</label>
-                                    <input type="text" id="cep" name="cep">
-                                </li>    
-                                <li>
-                                    <label for="endereco">Logradouro:</label>
-                                    <input type="text" id="endereco" name="endereco">
-                                </li>
-                                <li>
-                                    <label for="num_endereco">Nº:</label>
-                                    <input type="text" id="num_endereco" name="num_endereco"> 
-                                </li>
-                                <li>
-                                    <label for="bairro">Bairro:</label>
-                                    <input type="text" id="bairro" name="bairro">
-                                </li> 
-                                <li>
-                                    <label for="complemento">Complemento:</label>
-                                    <input type="text" id="complemento" name="complemento">
-                                </li>
-                                <li>
-                                    <label for="cidade">Cidade:</label>
-                                    <input type="text" id="cidade" name="cidade">
-                                </li> 
-                                <li>
-                                    <label for="uf">Estado:</label>
-                                    <input type="text" id="uf" name="uf">
-                                </li> 
-                                <li>
-                                    <label for="nacionalidade">Nacionalidade:</label>
-                                    <input type="text" id="nacionalidade" name="nacionalidade">
-                                </li>
-                            </ul>
-    
-                    >       
-                    <button type="submit">salvar</button>
-                    <button type="reset">Reiniciar</button>   
-                </form>       
+                <fieldset>
+                    <legend><strong>Dados Gerais</strong></legend>
+                        <div class="campo">
+                            <label for="nome">Nome do paciente:</label>
+                            <input type="text" id="nome" name="nome" required> 
+                        </div>    
+                        <div class="campo">
+                            <label for="sexo">Gênero:</label>
+                                <select  id="sexo" name="sexo">
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="O">Outro</option>
+                                </select>    
+                        </div>
+                        <div class="campo">       
+                            <label for="data_nascimento">Data de Nascimento:</label>
+                            <input type="date" id="data_nascimento" name="data_nascimento">
+                        </div>
+                        <div class="campo">
+                            <label for="num_sus">Cadastro SUS:</label>
+                            <input type="text" id="num_sus" name="num_sus">
+                        </div>
+                        <div class="campo">
+                            <label for="num_cpf">CPF:</label>
+                            <input type="text" id="num_cpf" name="num_cpf">
+                        </div>
+                        <div class="campo">
+                            <label for="num_telefone">Contato:</label>
+                            <input type="text" id="num_telefone" name="num_telefone">
+                        </div>
+                        <div class="campo">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Dados de Endereço</strong></legend>
+                        <div class="campo">
+                            <label for="cep">CEP:</label>
+                            <input type="text" id="cep" name="cep">
+                        </div>    
+                        <div class="campo">
+                            <label for="endereco">Logradouro:</label>
+                            <input type="text" id="endereco" name="endereco">
+                        </div>
+                        <div class="campo">
+                            <label for="num_endereco">Nº:</label>
+                            <input type="text" id="num_endereco" name="num_endereco"> 
+                        </div>
+                        <div class="campo">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" id="bairro" name="bairro">
+                        </div> 
+                        <div class="campo">
+                            <label for="complemento">Complemento:</label>
+                            <input type="text" id="complemento" name="complemento">
+                        </div>
+                        <div class="campo">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" id="cidade" name="cidade">
+                        </div> 
+                        <div class="campo">
+                            <label for="uf">Estado:</label>
+                            <input type="text" id="uf" name="uf">
+                        </div> 
+                        <div class="campo">
+                            <label for="nacionalidade">Nacionalidade:</label>
+                            <input type="text" id="nacionalidade" name="nacionalidade">
+                        </div>
+                </fieldset>                          
+                        <button type="submit">salvar</button>
+                        <button type="reset">Reiniciar</button>        
+            </form>     
         </main>
+        <footer>
+            LB_Solutions™
+        </footer>
     </body>
 </html>

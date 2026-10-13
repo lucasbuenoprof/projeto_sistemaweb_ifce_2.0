@@ -4,40 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>busca_paciente</title>
-     <link rel="stylesheet" href="../css/style.css">
-    <!-- CDN do Font Awesome (necessário para os ícones funcionarem) -->
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-    <body>
-        <header>   
-            <div>
-                 <h2><i class="fa-solid fa-hospital"></i> SIGEH - Sistema de Gestão Hospitalar</h2>
-                <a href="sigeh_login.html"><button>Sair</button></a>
-            </div>
-        </header>
-        <main>
-            <fieldset>
-                <legend>Busca de Pacientes</legend>
-                 <nav>
-                    <label for="nome"><strong>Nome do paciente:</strong></label>
+<body>
+    <header>   
+        <div>
+            <h2><i class="fa-solid fa-hospital"></i> SIGEH - Sistema de Gestão Hospitalar</h2>
+            <a href="sigeh_login.html"><button type="button">Sair</button></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Caixa de Busca -->
+        <fieldset>
+            <legend>Busca de Pacientes</legend>
+            <form action="#" method="get">
+                <div class="campo">
+                    <label for="nome">Nome do paciente:</label>
                     <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="campo">
                     <label for="data_nascimento">Data de Nascimento:</label>
                     <input type="date" id="data_nascimento" name="data_nascimento">
-                    <button type="#">Buscar</button>
-                 </nav>     
-            </fieldset>
-            <fieldset>
-                <legend>Lista de Pacientes </legend>
-                <table = border "1">
-                    <tr >
+                </div>
+
+                <button type="submit">Buscar</button>
+            </form>     
+        </fieldset>
+
+        <!-- Tabela de Pacientes -->
+        <fieldset>
+            <legend>Lista de Pacientes</legend>
+            <table>
+                <thead>
+                    <tr>
                         <th>Nome</th>
-                        <th> Data de Nacimento </th>
+                        <th>Data de Nascimento</th>
                         <th>CPF</th>
                         <th>Nº do prontuário</th>
                         <th>Contato</th>
                         <th>Cidade</th>
                         <th>Ações</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>Marcela Silva</td>
                         <td>15/10/1990</td>
@@ -46,8 +58,8 @@
                         <td>88 99388-7514</td>
                         <td>Sobral</td>
                         <td>
-                        <button type="#">Editar</button>
-                        <button type="#">Excluir</button>
+                            <button type="button" class="btn-editar">Editar</button>
+                            <button type="button" class="btn-excluir">Excluir</button>
                         </td>
                     </tr>
                     <tr>
@@ -58,12 +70,16 @@
                         <td>88 99984-6556</td>
                         <td>Forquilha</td>
                         <td>
-                        <button type="#">Editar</button>
-                        <button type="#">Excluir</button>
+                            <button type="button" class="btn-editar">Editar</button>
+                            <button type="button" class="btn-excluir">Excluir</button>
                         </td>
                     </tr>
-                </table>
-            </fieldset>
-        </main>
-    </body>
+                </tbody>
+            </table>
+        </fieldset>
+    </main>
+    <footer>
+        LB_Solutions™
+    </footer>
+</body>
 </html>
