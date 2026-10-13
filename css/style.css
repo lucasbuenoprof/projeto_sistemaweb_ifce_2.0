@@ -1,0 +1,145 @@
+/* ==========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
+
+/* Seletor Universal (*): Seleciona TODOS os elementos da página para padronizar o visual */
+* {
+    margin: 0;                   /* Zera as margens externas padrão dos elementos */
+    padding: 0;                  /* Zera os espaçamentos internos padrão */
+    box-sizing: border-box;      /* Inclui padding e border no cálculo da largura total do elemento */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a pilha de fontes do texto */
+}
+
+/* Configuração do contêiner principal da aplicação */
+body {
+    background-color: #f4f7f6;   /* Cor de fundo da página (tom cinza-claro hospitalar) */
+    color: #333;                 /* Cor padrão dos textos (cinza-escuro para leitura suave) */
+    display: flex;               /* Ativa o layout Flexbox no elemento pai */
+    flex-direction: column;      /* Organiza os filhos (header, main, footer) em coluna vertical */
+    min-height: 100vh;           /* Altura mínima de 100% da altura da janela visível (Viewport Height) */
+}
+
+
+/* ==========================================
+   2. CABEÇALHO (HEADER) E RODAPÉ (FOOTER)
+   ========================================== */
+
+/* Estilização da barra superior */
+header {
+    background-color: #0056b3;   /* Azul hospitalar para o fundo */
+    color: #ffffff;              /* Texto e ícones na cor branca */
+    padding: 1rem;               /* Espaçamento interno (1rem = ~16px) */
+    text-align: center;          /* Centraliza o título e o ícone na horizontal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cria uma sombra suave abaixo da barra */
+}
+
+/* Estilização da barra inferior */
+footer {
+    background-color: #e9ecef;   /* Fundo cinza bem claro */
+    text-align: center;          /* Centraliza o texto institucional */
+    padding: 0.8rem;             /* Espaçamento interno compacto */
+    font-size: 0.85rem;          /* Tamanho da fonte levemente reduzido */
+    color: #6c757d;              /* Cor de texto cinza-médio */
+    margin-top: auto;            /* Empurra o rodapé para o final da tela aproveitando o Flexbox */
+}
+
+
+/* ==========================================
+   3. ÁREA PRINCIPAL (MAIN) E LOGO
+   ========================================== */
+
+/* Seção central da página onde fica o login */
+main {
+    flex: 1;                     /* Faz o <main> crescer e ocupar todo o espaço vertical livre */
+    display: flex;               /* Habilita Flexbox no main */
+    flex-direction: column;      /* Empilha imagem, título e formulário na vertical */
+    align-items: center;         /* Centraliza os elementos no eixo horizontal */
+    justify-content: center;     /* Centraliza os elementos no eixo vertical */
+    padding: 2rem 1rem;          /* Espaçamento interno superior/inferior e laterais */
+}
+
+/* Controle de tamanho da imagem do logo */
+main img {
+    width: 100px;                /* Define a largura fixa da imagem em 100 pixels */
+    margin-bottom: 1rem;         /* Cria um espaço abaixo da imagem */
+}
+
+/* Estilização do título secundário h3 */
+main h3 {
+    color: #0056b3;              /* Tom de azul igual ao do cabeçalho */
+    margin-bottom: 1.5rem;       /* Afasta o título do cartão do formulário */
+    font-size: 1.3rem;           /* Aumenta o tamanho do texto do título */
+}
+
+
+/* ==========================================
+   4. CAIXA DE LOGIN (O CARTÃO)
+   ========================================== */
+
+form.login {
+    background-color: white;   /* Cartão branco */
+    width: 320px;              /* Largura fixa ajustada */
+    margin: 0 auto;            /* Centraliza a caixa na tela */
+    padding: 25px;             /* Aumentamos o espaço interno */
+    border-radius: 8px;        /* Bordas arredondadas */
+}
+
+/* Remove a linha padrão do fieldset */
+fieldset {
+    border: none;
+}
+
+
+/* ==========================================
+   5. CAMPOS (USUÁRIO E SENHA)
+   ========================================== */
+
+/* Espaço abaixo de cada bloco de campo */
+.campo {
+    margin-bottom: 20px;       /* Aumentado para afastar as duas caixas de texto */
+    text-align: left;
+}
+
+/* Texto acima das caixas de texto */
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* As caixas de entrada onde se digita */
+.campo input {
+    width: 100%;               /* Força o campo a ocupar todo o espaço do cartão */
+    padding: 10px;             /* Altura mais confortável para digitar */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;    /* Evita que o padding faça a caixa passar do tamanho */
+}
+
+
+/* ==========================================
+   6. BOTÃO E LINK
+   ========================================== */
+
+button {
+    width: 100%;               /* Botão ocupando toda a largura */
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;       /* Cria espaço entre o botão e o link abaixo */
+}
+
+/* Link de "Esqueceu sua senha?" */
+.link-auxiliar {
+    text-align: center;
+}
+
+.link-auxiliar a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 13px;
+}

@@ -8,45 +8,46 @@
 
     <!-- CDN do Font Awesome (necessário para os ícones funcionarem) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
 <body>
-    <header >
-        
+    <header>
         <h2><i class="fa-solid fa-hospital"></i> SIGEH - Sistema de Gestão Hospitalar</h2>
-        
     </header>
-    <main>
-        <br>
-        <img src="../imagens/logo_sigehsf.png" width="100" alt="Logo SIGEH">
-        
+    <main >
+        <img src="../imagens/logo_sigehsf.png" alt="Logo SIGEH">
+
         <h3><i class="fa-solid fa-user-lock"></i> Acesse seu Usuário</h3>
         <!-- Mudar para POST no backend por segurança) -->
         <!--required--> 
      
         <form class="login" action="sigeh_home.html" method="GET">
-           <fieldset>
-               <div>
+               <div class="campo">
                     <label for="usuario">
                         <i class="fa-solid fa-user"></i> <strong>Usuário / E-mail:</strong>
                     </label>
                     <input type="text" id="usuario" name="usuario">
-            
+                </div>    
+                <div class="campo">
                     <label for="senha">
                         <i class="fa-solid fa-key"></i> <strong>Senha:</strong>
                     </label>
                     <input type="password" id="senha" name="senha">
-                </div>          
-                <br>
+                </div>       
                 <div>
                     <button type="submit">
                        <i class="fa-solid fa-right-to-bracket"></i> Entrar
                     </button>
+                </div>
+                <div>   
                     <p class="link-auxiliar">
                     <a href="#"><i class="fa-solid fa-lock"></i> Esqueceu sua senha?</a>
                     </p>
-                    </div>
-            </fieldset>
+                </div>
         </form>
     </main>
+    <footer>
+        LB_Solutions™
+    </footer>
 </body>
 </html>

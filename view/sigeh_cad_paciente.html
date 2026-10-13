@@ -22,25 +22,23 @@
             
                 <form action="sigeh_home.html" method="get">
                
-                    <fieldset>
-                        <legend>Dados Gerais</legend>
-                            <ul>
-                                <li>
-                                    <label for="nome">Nome do paciente:</label>
-                                    <input type="text" id="nome" name="nome" required> 
-                                </li>    
-                                <li>
-                                    <label for="sexo">Gênero:</label>
+                    
+                        <dt><strong>Dados Gerais</strong></dt>
+                            <dd><label for="nome">Nome do paciente:</label>
+                                <input type="text" id="nome" name="nome" required> 
+                            </dd>    
+                            <dd>
+                                <label for="sexo">Gênero:</label>
                                     <select  id="sexo" name="sexo">
                                         <option value="M">Masculino</option>
                                         <option value="F">Feminino</option>
                                         <option value="O">Outro</option>
                                     </select>    
-                                </li>
-                                <li>
-                                    <label for="data_nascimento">Data de Nascimento:</label>
-                                    <input type="date" id="data_nascimento" name="data_nascimento">
-                                </li>
+                            </dd>
+                                
+                                <label for="data_nascimento">Data de Nascimento:</label>
+                                <input type="date" id="data_nascimento" name="data_nascimento">
+                            </dd>
                                 <li>
                                     <label for="num_sus">Cadastro SUS:</label>
                                     <input type="text" id="num_sus" name="num_sus">
@@ -58,11 +56,8 @@
                                     <input type="email" id="email" name="email">
                                 </li>
                             </ul>
-                    </fieldset>
-                        
-                        <br>
-                        
-                    <fieldset>
+              
+                
                         <legend>Dados de Endereço</legend>
                             <ul>
                                 <li>
@@ -98,13 +93,11 @@
                                     <input type="text" id="nacionalidade" name="nacionalidade">
                                 </li>
                             </ul>
-                    </fieldset>
-                        
-                    <br>       
+    
+                    >       
                     <button type="submit">salvar</button>
                     <button type="reset">Reiniciar</button>   
-                </form>    
-            </fieldset>    
+                </form>       
         </main>
     </body>
 </html>
