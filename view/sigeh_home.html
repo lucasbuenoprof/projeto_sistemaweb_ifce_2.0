@@ -5,62 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home_SIGEH</title>
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- CDN do Font Awesome (necessário para os ícones funcionarem) -->
+    <!-- CDN do Font Awesome para os ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-    <body>
-        <header>   
-            <div>
-                 <h2><i class="fa-solid fa-hospital"></i> SIGEH - Sistema de Gestão Hospitalar</h2>
-                <a href="sigeh_login.html"><button>Sair</button></a>
+<body>
+    <header>   
+        <div>
+            <h2><i class="fa-solid fa-hospital"></i> SIGEH - Sistema de Gestão Hospitalar</h2>
+            <a href="sigeh_login.html"><button type="button">Sair</button></a>
+        </div>
+    </header>
+
+    <main>
+        <fieldset>
+            <legend>Painel de Gerenciamento Administrativo</legend>            
+            
+            <div class="menu-adm">
+                <!-- Bloco Pacientes -->
+                <div class="card-opcao">
+                    <h3><i class="fa-solid fa-hospital-user"></i> Pacientes</h3>
+                    <a href="sigeh_cad_paciente.html"><i class="fa-solid fa-plus"></i> Cadastrar</a>
+                    <a href="sigeh_buscar_paciente.html"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+                </div>
+
+                <!-- Bloco Profissionais -->
+                <div class="card-opcao">
+                    <h3><i class="fa-solid fa-user-md"></i> Profissionais</h3>
+                    <a href="sigeh_buscar_proficional.html"><i class="fa-solid fa-plus"></i> Cadastrar</a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+                </div>
+
+                <!-- Bloco Prontuários -->
+                <div class="card-opcao">
+                    <h3><i class="fa-solid fa-file-medical"></i> Prontuários</h3>
+                    <a href="#"><i class="fa-solid fa-plus"></i> Cadastrar</a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+                </div>
             </div>
-        </header>
-        <br>
-        <main>
-            <fieldset>
-                <legend><h1> Painel de Gerenciamento administrativo </h1></legend>            
-                <nav>
-                    <ul>
-                        <div>
-                            <dt>Pacientes</dt>
-                            <dd>
-                                <li><a href="sigeh_cad_paciente.html">
-                                Cadastrar</a></li>
-                            </dd> 
-                            <dd>
-                                <li><a href="sigeh_buscar_paciente.html">
-                                Buscar</a></li>
-                            </dd>
-                            <br> 
-                        </div>
-                        <div>
-                            <dt>Profissionais</dt>
-                            <dd>
-                                <li><a href="sigeh_cad_profisional.html">
-                                Cadastrar</a></li>
-                            </dd>
-                            <dd>
-                                <li><a href="#">
-                                Buscar</a></li>
-                            </dd>
-                            <br>   
-                        </div>
-                        <div>
-                            <dt>Prontuários</dt>
-                            <dd>
-                                <li><a href="#">
-                                Cadastrar</a></li>
-                            </dd>
-                            <dd>
-                                <li><a href="#">
-                                Buscar</a></li>
-                            </dd>
-                            <br>
-                        </div>
-                    </ul>
-                </nav>
-            </fieldset>
-        </main>
-    </body>
+        </fieldset>
+    </main>
+
+    <footer>
+        LB_Solutions™
+    </footer>
+</body>
 </html>
