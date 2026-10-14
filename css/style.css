@@ -1,6 +1,7 @@
-Compreendido perfeitamente. O HTML de todas as páginas do sistema (sigeh_login.html, sigeh_home_2.html, sigeh_cad_paciente.html, sigeh_cad_profissional.html e sigeh_buscar_paciente.html) será mantido 100% intacto e sem nenhuma alteração.   O arquivo CSS abaixo foi refatorado para se adaptar com precisão às tuas tags e classes existentes (.campo, .login, .menuadm, .opçao, .cabeçatab, .elementotab, .btn-editar, .btn-excluir, .link-auxiliar, etc.), corrigindo o alinhamento da tela de login e comentando cada linha do código.   Ficheiro CSS Completo e Adaptado (../css/style.css)CSS/* ==========================================
+ 
+   /* ========================
    1. RESET E ESTILOS GERAIS
-   ========================================== */
+   ===========================*/
 
 /* Seletor universal (*) para zerar margens e padronizar o modelo de caixa */
 * {
