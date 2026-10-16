@@ -1,0 +1,60 @@
+ body {
+    font-family: Arial, sans-serif; /* Fonte padrão de toda a página */
+    background-color: #f4f9f9;      /* Cor do fundo da página */
+    color: #a81919;                 /* Cor padrão dos textos gerais */
+}
+
+h1 {
+    color: #0056b3;                 /* Cor azul do título principal */
+    text-align: center;             /* Centraliza o texto do h1 na tela */
+}
+
+.titulo-cartao {
+    color: #28a745;                 /* Cor verde do título dentro dos cartões */
+    margin-top: 0;                  /* Encosta o título no topo do cartão */
+}
+
+.texto-codigo {
+    background-color: #eeeeee;      /* Fundo cinza do trecho <code> */
+    color: #c333d6;                 /* Cor roxa/magenta da fonte de código */
+    padding: 2px 6px;               /* Espaçamento interno do bloco de código */
+    border-radius: 4px;             /* Arredondamento suave dos cantos */
+}
+
+#rodape-principal {
+    text-align: center;             /* Centraliza o texto do rodapé */
+    font-size: 0.9rem;              /* Tamanho da fonte menor (relativo a 16px) */
+    color: #6c757d;                 /* Cor cinza do texto do rodapé */
+    margin-top: 150px;              /* Empurra o rodapé para longe dos cartões */
+}
+
+.cartao-destaque {
+    background-color: #ffffff;      /* Fundo branco da caixa do cartão */
+    color: #333333;                 /* Cor do texto interno do cartão */
+    padding: 30px;                  /* Espaço interno entre o texto e a borda */
+    border: 2px solid #0056b3;      /* Borda azul sólida de 2 pixels */
+    border-radius: 8px;             /* Cantos arredondados do cartão */
+    margin: 20px 0;                 /* Margem externa (20px topo/base, 0 laterais) */
+}
+
+.imagem-centralizada {
+    width: 15%;                     /* Imagem ocupa 15% da largura do cartão */
+    max-width: 100%;                /* Evita que a imagem ultrapasse o cartão */
+    height: auto;                   /* Mantém a proporção de altura sem distorcer */
+    display: block;                 /* Transforma em bloco para aceitar margem auto */
+    border-radius: 6px;             /* Arredonda os cantos da imagem */
+    margin: 10px auto;              /* Margem 'auto' nas laterais centraliza o bloco */
+}
+
+.conteudo-lado-a-lado {
+    display: flex;                  /* Ativa o Flexbox para alinhar itens lado a lado */
+    align-items: center;            /* Centraliza verticalmente imagem e texto */
+    gap: 10px;                      /* Espaço fixo de 15px entre a imagem e o texto */
+}
+
+.imagem-mais-texto {
+    width: 5%;                     /* Largura da imagem dentro do Flexbox */
+    max-width: 100%;                /* Limite máximo de largura */
+    height: auto;                   /* Mantém a proporção da altura */
+    border-radius: 6px;             /* Arredonda os cantos da imagem */
+}
